@@ -6,9 +6,15 @@ import axios from 'axios'
 function UserProfile() {
   const [tableData, setTableData] = React.useState([]);
   React.useEffect(() => {
-    const alltableDatta =  axios.get(endpoint.getAllDataApi);
-    console.log('alltable data --', alltableDatta.data.data);
-    setTableData(alltableDatta.data.data);
+    // const alltableDatta =  axios.get(endpoint.getAllDataApi);
+    // console.log('alltable data --', alltableDatta.data.data);
+    axios.get(endpoint.getAllDataApi).then((response ) => {
+      console.log(response.data.data);
+      setTableData(response.data.data);
+    }).catch((error) => {
+      console.log('error in api call' , error)
+    })
+    
   },[])
 
   return (
