@@ -1,0 +1,82 @@
+.main {
+  display: grid;
+  grid-template-columns: 50% auto;
+  height: 100vh;
+  @media screen and (max-width: 480px) {
+    grid-template-columns: auto;
+    width: 100%;
+  }
+
+  .left {
+    background-image: linear-gradient(to right, #78bd8e, #96daba, #a8dbd9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+
+    .emaillabel {
+      font-size: 24px;
+      font-weight: bold;
+      font-family: "Times New Roman", Times, serif;
+      @media screen and (max-width: 480px) {
+        font-size: 20px;
+        //  text-align: center;
+      }
+    }
+
+    .formgroup {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 14px;
+        margin-bottom: 5px;
+        @media screen and (max-width: 480px) {
+          font-size: 18px;
+
+          font-family: "Times New Roman", Times, serif;
+          text-align: center;
+        }
+      }
+      input[type="email"],
+      input[type="password"] {
+        padding: 10px;
+        margin-bottom: 10px;
+        outline: none;
+        border: 1px solid #57bd78;
+        width: 350px;
+        border-radius: 6px;
+        @media screen and (max-width: 480px) {
+          width: 100%;
+        }
+      }
+
+      .loginbtn {
+        margin-top: 20px;
+        background-color: #52bca3;
+        color: #ffffff;
+        border-radius: 6px;
+        cursor: pointer;
+        padding: 10px;
+        width: 100px;
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+        box-shadow: 0 10px 20px 0 rgba(153, 153, 153, 0.5);
+        &:hover
+        {
+          background-color:  #2e8148;
+        }
+      }
+    }
+  }
+}
