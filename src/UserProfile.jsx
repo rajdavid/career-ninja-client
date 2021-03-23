@@ -4,7 +4,7 @@ import React from 'react'
 import endpoint from './utility/endpoint'
 import axios from 'axios'
 function UserProfile() {
-  const [tableData, setTableData] = React.useState();
+  const [tableData, setTableData] = React.useState([]);
   React.useEffect(async () => {
     const alltableDatta = await axios.get(endpoint.getAllDataApi);
     console.log('alltable data --', alltableDatta.data.data);
