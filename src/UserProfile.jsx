@@ -5,8 +5,8 @@ import endpoint from './utility/endpoint'
 import axios from 'axios'
 function UserProfile() {
   const [tableData, setTableData] = React.useState([]);
-  React.useEffect(async () => {
-    const alltableDatta = await axios.get(endpoint.getAllDataApi);
+  React.useEffect(() => {
+    const alltableDatta =  axios.get(endpoint.getAllDataApi);
     console.log('alltable data --', alltableDatta.data.data);
     setTableData(alltableDatta.data.data);
   },[])
@@ -15,7 +15,7 @@ function UserProfile() {
     <div className="dashboard">
       <div className="left">
         <div className="divimage">
-          <img src="/career.png" />
+          <img src="/career.png" alt=""/>
         </div>
 
         <div className="list">

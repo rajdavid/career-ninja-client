@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.scss';
 import React from "react"
 function App() {
@@ -17,12 +17,12 @@ function App() {
     console.log('inside login');
     console.log('login state  ---', loginState);
     // some comments
-    
+
   }
   return (
     <div className="main">
       <div className="left">
-<img src="/career.png" />
+<img src="/career.png" alt=""/>
       </div>
       <div className="right">
         <p className="emaillabel">Login via E-mail</p>
