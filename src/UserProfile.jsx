@@ -1,10 +1,13 @@
 
 import "./dashboard.scss";
-import React from 'react'
-import endpoint from './utility/endpoint'
+import React, {useState} from "react";
+import endpoint from './utility/endpoint';
+
+import Modal from "./modal/index";
 import axios from 'axios'
 function UserProfile() {
   const [tableData, setTableData] = React.useState([]);
+  const [active, setactive] = useState(false)
   React.useEffect(() => {
     // const alltableDatta =  axios.get(endpoint.getAllDataApi);
     //console.log('alltable data --', alltableDatta.data.data);
@@ -36,7 +39,7 @@ function UserProfile() {
       </div>
       <div className="right">
         <div className="top">
-          <span className="topbtn">Add User</span>
+          <span className="topbtn" onClick={() => {setactive(true)}}>Add User</span>
         </div>
         <div className="middle">
           <p className="head">Home</p>
@@ -67,6 +70,7 @@ function UserProfile() {
           </table>
         </div>
       </div>
+      {active ? <Modal /> : null } 
     </div>
   );
 }

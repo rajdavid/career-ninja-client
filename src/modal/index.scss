@@ -1,0 +1,139 @@
+
+
+.editModalWrapper {
+  position: fixed;
+  display: flex;
+
+  justify-content: center;
+  z-index: 999;
+  background-color: rgba(6, 10, 38, 0.8);
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  overflow: auto;
+  right: 0;
+ 
+
+  .modalBox {
+ 
+    width: 820px;
+    background-color: #f7f8fc;
+    position: absolute;
+
+    @media screen and (max-width: 768px) {
+       height: 100%;
+        width: 100%;
+      }
+    .modalHeader {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #c8c8c8;
+      height: 80px;
+      width: 100%;
+      .content {
+        width: 205px;
+        height: 22px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 42px;
+
+        color: #001f82;
+      }
+    }
+
+    .modalBody {
+        margin: 30px 0px;
+      background-color: #f7f8fc;
+      padding: 20px 58px 20px 42px;
+      .maincontent
+      {
+          display: flex;
+          flex-direction: column;
+          input[type=email],select
+          {
+              outline: none;
+              padding: 10px;
+              margin-top: 20px;
+              border: none;
+              background-color: #ffffff;
+              @media screen and (max-width: 768px) {
+      
+                width: 250px;
+              }
+          }
+          select
+          {
+            @media screen and (max-width: 768px) {
+      
+                width: 270px;
+              } 
+          }
+      }
+
+    
+  
+ 
+    }
+    .modalFooter {
+      height: 80px;
+      background-color: #f7f8fc;
+      padding: 16px;
+     
+      .combinedBtn {
+        display: flex;
+        justify-content: flex-end;
+        .rowBtn {
+        
+          color: #ffffff;
+          margin-right: 24px;
+          display: flex;
+          background-color: blue;
+          align-items: center;
+          padding: 10px 25px;
+          justify-content: center;
+          cursor: pointer;
+          .plusIcon {
+            margin-right: 5px;
+          }
+        
+          @media screen and (max-width: 768px) {
+      
+         
+            width: 250px;
+            margin-bottom: 20px;
+                       }
+
+        }
+        .exportListBtn {
+      
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #ffffff;
+          padding: 10px 25px;
+          background-color: blue;
+          margin-right: 20px;
+          cursor: pointer;
+          .uploadIcon {
+            margin-right: 5px;
+           
+          }
+          @media screen and (max-width: 768px) {
+      
+         
+width: 250px;
+           }
+        }
+        @media screen and (max-width: 768px) {
+      
+         padding: 0 16px;
+            flex-direction: column;
+           }
+      }
+   
+    }
+ 
+  }
+ 
+ 
+}

@@ -1,11 +1,13 @@
 
 import './App.scss';
-import React from "react"
+import React, {useState} from "react";
+
 function App() {
   const [loginState, setLoginState] = React.useState({
     email: "",
     password: '',
   });
+
   const onValueChange = async (e) => {
     console.log('e target id', e.target.id);
     setLoginState({
@@ -38,6 +40,7 @@ function App() {
           <span className="loginbtn" onClick={handleLogin}>Log In</span>
         </div>
       </div>
+ 
     </div>
   );
 }
