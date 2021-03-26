@@ -7,7 +7,7 @@ function UserProfile() {
   const [tableData, setTableData] = React.useState([]);
   React.useEffect(() => {
     // const alltableDatta =  axios.get(endpoint.getAllDataApi);
-    // console.log('alltable data --', alltableDatta.data.data);
+    //console.log('alltable data --', alltableDatta.data.data);
     axios.get(endpoint.getAllDataApi).then((response ) => {
       console.log(response.data.data);
       setTableData(response.data.data);
