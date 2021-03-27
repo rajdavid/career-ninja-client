@@ -3,7 +3,7 @@ import "./dashboard.scss";
 import React, {useState} from "react";
 import endpoint from './utility/endpoint';
 
-import Modal from "./modal/index";
+import Modal from "./components/modal/index";
 import axios from 'axios'
 function UserProfile() {
   const [tableData, setTableData] = React.useState([]);
