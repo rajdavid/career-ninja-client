@@ -1,7 +1,9 @@
 import './App.scss';
 import React, {useState} from "react";
-
+import { useHistory } from "react-router-dom";
 function App() {
+
+    const history = useHistory();
   const [loginState, setLoginState] = React.useState({
     email: "",
     password: '',
@@ -18,7 +20,7 @@ function App() {
     console.log('inside login');
     console.log('login state  ---', loginState);
     // some comments
-
+    history.push("/dashboard");
   }
   return (
     <div className="main">
