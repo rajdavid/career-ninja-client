@@ -7,10 +7,10 @@ import Modal from "./modal/index";
 import axios from 'axios'
 function UserProfile() {
   const [tableData, setTableData] = React.useState([]);
-  const [active, setactive] = useState(false)
+  const [active, setactive] = useState(false);
   React.useEffect(() => {
     // const alltableDatta =  axios.get(endpoint.getAllDataApi);
-    //console.log('alltable data --', alltableDatta.data.data);
+    //console.log('alltable data --', alltableDatta.data.data)
     axios.get(endpoint.getAllDataApi).then((response ) => {
       console.log(response.data.data);
       setTableData(response.data.data);
